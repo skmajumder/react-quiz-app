@@ -1,12 +1,16 @@
 import React from "react";
 import Options from "./Options";
 
-const Question = ({ question }) => {
-  console.log(question);
+const Question = ({ dispatch, question, answer, points }) => {
   return (
     <div>
       <h4>{question.question}</h4>
-      <Options question={question} />
+      <Options
+        dispatch={dispatch}
+        question={question}
+        answer={answer}
+        points={points}
+      />
     </div>
   );
 };
